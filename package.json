@@ -1,0 +1,27 @@
+{
+  "name": "coldmailpro-emailverifier",
+  "version": "6.4.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 3001",
+    "worker": "tsx --env-file=.env.local worker.ts"
+  },
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "bullmq": "5.58.5",
+    "lucide-react": "^0.468.0",
+    "mysql2": "^3.14.3",
+    "next": "^15.5.23",
+    "ping-email": "^1.0.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5"
+  }
+}

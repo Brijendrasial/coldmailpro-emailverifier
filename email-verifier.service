@@ -1,0 +1,19 @@
+[Unit]
+Description=coldmailpro emailverifier Next.js Application
+After=network.target mysqld.service mariadb.service redis.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/mj
+Environment=NODE_ENV=production
+Environment=PORT=3001
+EnvironmentFile=/root/mj/.env.local
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

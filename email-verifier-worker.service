@@ -1,0 +1,18 @@
+[Unit]
+Description=coldmailpro emailverifier BullMQ Worker
+After=network.target redis.service mysqld.service mariadb.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/mj
+Environment=NODE_ENV=production
+EnvironmentFile=/root/mj/.env.local
+ExecStart=/usr/bin/npm run worker
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
