@@ -310,7 +310,7 @@ Do **not** expose a mail relay or configure this server as an open relay. The ap
 If your server already has Node.js, MySQL, Redis and Git:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/coldmailpro-emailverifier.git /root/mj
+git clone https://github.com/Brijendrasial/coldmailpro-emailverifier.git /root/mj
 cd /root/mj
 
 npm install
