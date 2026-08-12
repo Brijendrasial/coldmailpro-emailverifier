@@ -413,7 +413,7 @@ nginx -v
 Example:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/coldmailpro-emailverifier.git /root/mj
+git clone https://github.com/Brijendrasial/coldmailpro-emailverifier.git /root/mj
 cd /root/mj
 ```
 
