@@ -1657,46 +1657,6 @@ Redis contains queue state, but MySQL holds persistent job/result/history inform
 
 ---
 
-# Publishing to GitHub
-
-Never publish `.env.local`.
-
-The repository `.gitignore` should contain at least:
-
-```gitignore
-node_modules
-.next
-.env
-.env.local
-npm-debug.log*
-.DS_Store
-```
-
-Initialize Git:
-
-```bash
-cd /root/mj
-
-git init
-git branch -M main
-git add .
-git status
-git commit -m "Initial release of coldmailpro emailverifier"
-```
-
-Create a public repository on GitHub, for example:
-
-```text
-coldmailpro-emailverifier
-```
-
-Then:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/coldmailpro-emailverifier.git
-git push -u origin main
-```
-
 For future updates:
 
 ```bash
@@ -1712,28 +1672,6 @@ git status
 ```
 
 Check carefully that no credential file has been staged.
-
----
-
-# Security
-
-This project talks directly to external mail servers and should be operated responsibly.
-
-Recommended production protections:
-
-- Keep `.env.local` private.
-- Never commit database passwords.
-- Do not expose Redis publicly.
-- Do not expose MySQL publicly unless required and secured.
-- Put Nginx in front of Next.js.
-- Keep the OS and Node.js dependencies patched.
-- Apply application/API rate limits.
-- Use conservative SMTP concurrency.
-- Monitor SMTP failures and temporary blocks.
-- Use a hostname/domain you control for SMTP identity.
-- Avoid turning the system into an open public mailbox-enumeration service without abuse controls.
-- Back up MySQL before upgrades.
-- Review `npm audit` findings before using `npm audit fix --force`; forced upgrades may introduce breaking dependency changes.
 
 ---
 
@@ -1780,21 +1718,6 @@ Respect:
 - provider rate limits
 - user consent requirements
 - suppression / do-not-contact obligations
-
----
-
-# Removed Integrations
-
-This release intentionally does **not** include:
-
-```text
-AI Verification Copilot
-Google Search Evidence
-Google PSE integration
-OpenAI integration
-```
-
-The core project remains SMTP/DNS/TLS focused.
 
 ---
 
